@@ -1,0 +1,27 @@
+<section name="total">
+	<h1>{{ almacen.titulo }}</h1>
+	<div class="row-fluid">
+		<div class="row placeholders">
+			<div class="col-xs-8 col-sm-4 placeholder">
+				<h4>Cantidad total productos</h4>
+                <h1>
+                    <span class="label label-default">
+                        {{ almacen.total.cantidad }}
+                    </span>
+                </h1>
+			</div>
+			<div class="col-xs-8 col-sm-4 placeholder">
+                <h4>Valor stock total</h4>
+				<h1>
+                    <span class="label label-default">
+                        {{ almacen.total.importeTotal | number:2 }} €
+                    </span>
+                </h1>
+			</div>
+			<div class="col-xs-8 col-sm-4 placeholder">
+                Grafico
+                
+			</div>
+		</div>
+	</div>
+</section>

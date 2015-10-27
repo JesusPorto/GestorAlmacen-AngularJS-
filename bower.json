@@ -1,0 +1,7 @@
+{
+  "name": "GestorAlmacen",
+  "dependencies": {
+    "angular-chart.js": "~0.8.5",
+    "Chart.js": "~1.0.2"
+  }
+}

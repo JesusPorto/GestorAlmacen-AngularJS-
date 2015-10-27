@@ -1,0 +1,61 @@
+<html lang="es" ng-app="gstrAlmacen">
+
+<head>
+	<title>Gestor del almacén</title>
+	<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+	<meta charset="utf-8" />
+	<meta lang="es" />
+	<meta name="description" content="Gestor de almacen" />
+	<meta name="author" content="Jesus" />
+	<meta name="application-name" content="ControlAngularJS" />
+	<meta name="Keywords" content="AngularJS, ejemplo, tutorial, curso" />
+	<link rel="author" href="" />
+	<!-- Bootstrap core CSS -->
+	<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="MenuGestor as menu">
+		<div class="navbar-inner">
+			<div class="container">
+				<ul class="nav navbar-nav">
+					<li ng-class="{ active: menu.isActive('Resumen') }">
+						<a ui-sref="resumen">Resumen</a>
+					</li>
+					<li ng-class="{ active: menu.isActive('Listado') }">
+						<a ui-sref="listado">Listado de productos</a>
+					</li>
+					<li ng-class="{ active: menu.isActive('Nuevo') }">
+						<a ui-sref="nuevo">Añadir productos</a>
+					</li>
+                    <li ng-class="{ active: menu.isActive('retirada') }">
+						<a ui-sref="retirada">Retirar productos</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- La directiva de ui-router es... ui-view-->
+	<div class="container text-center" style="padding-top:50px;" ui-view>
+		<!-- En este caso podríamos tener varias vista a la vez-->
+		<!-- Incluso estados anidados unos dentro de otros-->
+	</div>
+	<!-- JavaScript References -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
+    <script src="bower_components/Chart.js/Chart.min.js"></script>
+    <script src="bower_components/angular-chart.js/angular-chart.js"></script>
+    <script src="bower_components/angular-fusioncharts.min.js"></script>
+	<!-- En lugar del enrutador de AngularJS, usaremos uno de terceros, llamado ui-router-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+	<script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script> 
+	<script src="app.js"></script>
+	<script src="MenuGestor.js"></script>
+	<script src="almacenCtrl.js"></script>
+	<script src="categoriasServices.js"></script>
+	<script src="productosFactory.js"></script>
+    <script src="pieCtrl.js"></script>
+</body>
+
+</html>

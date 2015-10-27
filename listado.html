@@ -1,0 +1,29 @@
+<section name="Lista">
+    <p class="lead">Listado de productos en el almacén.</p>
+    <br>
+    <label class="control-label" for="importe">Filtrar por nombre:</label>
+    <input type="text" name="filtro" placeholder="qué buscas?" class="input" ng-model="valorBuscado">
+    <table class="table">
+        <thead>
+            <tr>
+                <th><a href="" ng-click="campo = 'nombre'; sentido = !sentido ">Nombre</a>
+                </th>
+                <th><a href="" ng-click="campo = 'descripcion'; sentido = !sentido ">Descripción</a></th>
+                <th><a href="" ng-click="campo = 'categoria'; sentido = !sentido ">Categoría</a></th>
+                <th><a href="" ng-click="campo = 'cantidad'; sentido = !sentido ">Cantidad</a>
+                </th>
+                <th><a href="" ng-click="campo = 'valorud'; sentido = !sentido ">Valor ud.</a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="movimiento in almacen.productos | filter:valorBuscado | orderBy:campo:sentido">
+                <td class="text-left">{{movimiento.nombre}}</td>
+                <td class="text-left">{{movimiento.descripcion}}</td>
+                <td class="text-left">{{movimiento.categoria}}</td>
+                <td class="text-left">{{movimiento.cantidad}}</td>
+                <td class="text-left">{{movimiento.valorud}}</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
