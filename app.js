@@ -1,4 +1,5 @@
 // tenemos que cambiar la dependencia hacia el nuevo módulo
+angular.module('gstrAlmacen', ['chart.js']);
 angular.module('gstrAlmacen', ['ui.router']);
 
 // las rutas ahora se maneja con el concepto de estado
@@ -13,7 +14,7 @@ angular.module('gstrAlmacen').config(function ($stateProvider) {
 		})
         .state('retirada', {
             url: '/retirada',
-            controller: 'LineCtrl as line',
+            controller: 'almacenCtrl as line',
             templateUrl: 'retirada.html'
         })
 		.state('nuevo', {
