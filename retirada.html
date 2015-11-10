@@ -1,12 +1,6 @@
 <section name="retirada" class="row-fluid">
-    <script>angular.module("gstrAlmacen", ["chart.js"]).controller("PieCtrl", function ($scope) {
-  $scope.labels = ["Download Sales", "In-Store Sales", "Mail-Order Sales"];
-  $scope.data = [300, 500, 100];
-});
-     </script>
-	<div class="container">
-	<canvas id="pie" class="chart chart-pie"
-  chart-data="data" chart-labels="labels"></canvas> 
-		</div>
-
+  <canvas id="line" class="chart chart-line" chart-data="data"
+  chart-labels="labels" chart-legend="true" chart-series="series"
+  chart-click="onClick" >
+</canvas> 
 </section>

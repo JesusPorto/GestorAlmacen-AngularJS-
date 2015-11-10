@@ -1,20 +1,23 @@
 // tenemos que cambiar la dependencia hacia el nuevo módulo
-angular.module('gstrAlmacen', ['chart.js']);
-angular.module('gstrAlmacen', ['ui.router']);
-
+angular.module('gstrAlmacen', ['ui.router','gaDirectivas']);
 // las rutas ahora se maneja con el concepto de estado
 angular.module('gstrAlmacen').config(function ($stateProvider) {
 	// Las rutas pasan a ser opcionales,
 	// en la práctica sólo se usan si vienen de aplicaciones externas y por cuestiones de SEO
 	$stateProvider
 		.state('resumen', {
+			url: '',
+			controller: 'almacenCtrl as almacen',
+			templateUrl: 'resumen.html'
+		})
+		.state('resumen2', {
 			url: '/',
 			controller: 'almacenCtrl as almacen',
 			templateUrl: 'resumen.html'
 		})
         .state('retirada', {
             url: '/retirada',
-            controller: 'almacenCtrl as line',
+            controller: 'almacenCtrl as almacen',
             templateUrl: 'retirada.html'
         })
 		.state('nuevo', {
